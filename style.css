@@ -1,0 +1,1207 @@
+/* ==========================================================================
+   1. VARIABLES & RESET
+   ========================================================================== */
+:root {
+    --primary-color: #E21B24;
+    --dark-color: #222;
+    --light-color: #f4f4f4;
+    --white: #ffffff;
+    --nav-height: 70px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1650px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION (DESKTOP)
+   ========================================================================== */
+.top-bar {
+    background-color: #d31411; /* CSI Red */
+    color: #ffffff;
+    width: 100%;
+    padding: 8px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.top-bar-container {
+    max-width: 1790px; /* Pantay sa grid mo */
+    margin: 0 auto;
+    padding: 0 5%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar-left, .top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.top-bar-item {
+    font-size: 13px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+/* 3. Main Header (Logo & Nav) */
+header {
+    background: #ffffff;
+    height: 80px; /* Fixed height for consistency */
+    display: flex;
+    align-items: center;
+}
+
+.header-content {
+    max-width: 1790px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+
+/* --- MOBILE VIEW FIX --- */
+@media (max-width: 768px) {
+    .top-bar {
+        padding: 8px 0;
+    }
+    
+    .top-bar-container {
+        flex-direction: column; /* I-stack ang items para hindi mag-overlap */
+        gap: 8px;
+        padding: 0 10px;
+    }
+
+    .top-bar-left {
+        flex-direction: column; /* Stack phone and email */
+        gap: 5px;
+    }
+
+    .top-bar-item {
+        font-size: 12px; /* Bahagyang liitan sa mobile */
+    }
+    
+    /* Itago ang email sa sobrang liit na screen kung kailangan */
+    /* .top-bar-left .top-bar-item:nth-child(2) { display: none; } */
+}
+
+/* Nav Desktop */
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 0 15px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    line-height: var(--nav-height);
+    display: block;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: var(--primary-color);
+}
+
+/* Sub-menu Desktop (Hover) */
+.sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--white);
+    min-width: 200px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: none; /* Tago muna */
+    flex-direction: column;
+}
+
+/* Desktop Hover logic */
+@media (min-width: 769px) {
+    .has-dropdown:hover .sub-menu {
+        display: flex;
+    }
+    .sub-menu li a {
+        line-height: 45px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+}
+
+.menu-toggle {
+    display: none;
+}
+
+
+
+/* ==========================================================================
+   MOBILE NAVIGATION - NO GRAY OVERLAY & RIGHT ALIGNED
+   ========================================================================== */
+
+@media screen and (max-width: 768px) {
+    /* Side Panel - Ngayon ay nasa KANAN na */
+    nav#main-nav {
+        position: fixed !important;
+        top: 70px; /* Sukat ng header height mo */
+        right: -100%; /* Nakatago sa kanang labas ng screen */
+        left: auto;   /* Siguraduhing hindi naka-set sa left */
+        width: 280px;
+        height: calc(100vh - 70px); 
+        background: #ffffff !important;
+        z-index: 999; 
+        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: -5px 0 15px rgba(0,0,0,0.05);
+        display: block !important;
+        overflow-y: auto;
+        
+    }
+.has-dropdown {
+        position: relative;
+    }
+    /* Pag lumabas ang menu, papasok siya galing kanan */
+    nav#main-nav.active {
+        right: 0 !important;
+    }
+
+    /* Overlay - Ginawang transparent para clickable ang paligid */
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent; 
+        z-index: 998;
+        display: none;
+    }
+
+    .menu-overlay.active {
+        display: block;
+    }
+
+    /* Alignment ng text at arrow */
+    nav ul li a {
+        display: flex !important;
+        justify-content: space-between; 
+        align-items: center;
+        padding: 18px 25px;
+        text-align: left;
+    }
+}
+
+    /* Ilipat ang dropdown list sa kanan */
+    .sub-menu {
+        position: absolute;
+        top: 100%;       /* Lalabas sa ilalim ng Products text */
+        right: 0;        /* Ito ang maglilipat sa kanya sa gawing kanan */
+        left: auto;      /* I-reset ang left alignment */
+        min-width: 200px;
+        background: #ffffff;
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+        z-index: 1000;
+        display: none;    /* Tago muna, lalabas lang pag clinick */
+    }
+
+    .sub-menu.open {
+        display: block !important;
+    }
+
+    /* Alignment ng bawat item sa loob */
+    .sub-menu li a {
+        text-align: right; /* Kung gusto mo pati text ay nasa kanan */
+        padding: 12px 20px;
+        display: block;
+    }
+
+    /* Arrow Icon Rotation */
+    .active-drop i {
+        transform: rotate(180deg);
+        transition: 0.3s;
+    }
+
+
+/* Header fix para hindi lumubog ang logo */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000 !important;
+    background: #ffffff;
+    height: 70px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Oswald:wght@700&display=swap');
+
+.main-hero-wrapper {
+    width: 100%;
+    height: 89vh;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Background Logic */
+.background-slider, .bg-slide {
+    position: absolute;
+    inset: 0;
+}
+.bg-slide {
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+.bg-slide.active { opacity: 1; }
+
+/* Static Overlays */
+.static-content {
+    position: absolute;
+    inset: 0;
+    z-index: 10; /* Para laging nasa ibabaw ng slider */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to right, rgba(0,0,0,0.6) 0%, transparent 60%);
+}
+
+/* Pinaliit na Hero Text */
+.hero-text-area {
+    padding-left: 8%;
+    color: #fff;
+    margin-bottom: 200px;
+}
+.hero-text-area .sub-title {
+    font-size: 1.9rem;
+    letter-spacing: 4px;
+    margin-bottom: 5px;
+}
+.hero-text-area h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3.8rem;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+.btn-modern {
+    display: inline-block;
+    padding: 20px 50px;
+    background: #bd1818;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+}
+.btn-modern:hover {
+    background-color:  rgb(26, 4, 85); /* Mas maliwanag na pula sa hover */
+    transform: scale(1.05); /* Bahagyang lalaki ang button */
+    box-shadow: 0 0 20px rgba(160, 0, 0, 0.6); /* Red glow effect */
+    
+    letter-spacing: 1px; /* Bahagyang maghihiwalay ang mga letra */
+}
+
+/* Effect kapag pinindot (click) */
+.btn-modern:active {
+    transform: scale(0.95); /* Lulubog nang kaunti */
+}
+
+/* --- MOBILE VIEW FOR HERO SECTION --- */
+@media (max-width: 768px) {
+    .main-hero-wrapper {
+        height: 80vh; /* Bawasan ang height sa mobile para makita ang content sa baba */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bg-slide {
+        background-position: center center; /* Siguradong nasa gitna ang focus ng picture */
+        background-size: cover;
+    }
+
+    .static-content {
+        padding: 0 20px;
+        text-align: center; /* I-center ang text sa mobile */
+        width: 100%;
+    }
+
+    .hero-text-area {
+        max-width: 100%;
+    }
+
+    .hero-text-area .sub-title {
+        font-size: 1rem; /* Mas maliit na sub-title */
+        letter-spacing: 3px;
+        margin-bottom: 10px;
+    }
+
+    .hero-text-area h1 {
+        font-size: 2.2rem; /* Mas maliit na heading para hindi mag-overlap */
+        line-height: 1.2;
+        margin-bottom: 25px;
+    }
+
+    .btn-modern {
+        padding: 14px 30px;
+        font-size: 0.9rem;
+        display: inline-block; /* Siguradong nasa gitna ang button */
+        width: auto;
+    }
+}
+
+/* Fix para sa mga sobrang liliit na phone (iPhone SE) */
+@media (max-width: 480px) {
+    .hero-text-area h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Bottom Info Strip */
+.info-strip {
+    width: 100%;
+    background: rgba(255,255,255,0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 8px 0;
+    font-size: 0.75rem;
+}
+.divider { width: 1px; height: 15px; background: #ccc; }
+
+.tire-modern-clean {
+    position: relative !important;
+    padding: 20px 5% !important;
+    background: #ffffff !important;
+    min-height: 800px !important;
+    display: flex !important;
+    align-items: center !important;
+    overflow: hidden !important;
+    
+}
+.tire-bg-white-layer {
+    position: absolute !important;
+    inset: 0 !important;
+    background-image: url('picture/[CSI]\ Home\ Pitstop\ -\ Background.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    opacity: 0.35 !important;
+    z-index: 1 !important;
+}
+
+.tire-content-wrap {
+    position: relative !important;
+    z-index: 10 !important;
+    display: flex !important;
+    max-width: 1800px !important;
+    margin: 0 auto !important;
+    width: 89% !important;
+    gap: 40px !important;
+    align-items: center !important;
+}
+
+/* Adjusted Typography Size */
+.tire-text-col { flex: 0 0 350px !important;}
+
+.tire-text-col  {
+
+text-align: left;
+  font-family: 'Arial Black', sans-serif; /* Pwedeng palitan depende sa trip mong font */
+  padding: 150px;
+
+margin-left: -15% !important;
+
+}
+.tire-main-title {
+    font-family: 'Arial Black', sans-serif !important;
+   
+    line-height: 1.1 !important;
+    color: #1a1a1a !important;
+    letter-spacing: -1px !important;
+   font-size: 64px; /* Malaki at bold */
+    margin-bottom: 1; /* Para dikit ang tagline sa taas */
+    text-transform: uppercase;
+     letter-spacing: 2px;
+     color: #333;
+}
+
+/* Base style para sa button base sa iyong image */
+.tire-action-red {
+    display: inline-block;
+    background-color: #a00; /* Dark red base */
+    color: #ffffff;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-weight: 900;
+    font-family: 'Arial Black', sans-serif;
+    letter-spacing: 1px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Smooth spring effect */
+    border: 2px solid transparent;
+}
+
+/* --- MODERN HOVER EFFECT --- */
+.tire-action-red:hover {
+    background-color:  rgb(26, 4, 85); /* Mas maliwanag na pula sa hover */
+    transform: scale(1.05); /* Bahagyang lalaki ang button */
+    box-shadow: 0 0 20px rgba(160, 0, 0, 0.6); /* Red glow effect */
+    
+    letter-spacing: 1px; /* Bahagyang maghihiwalay ang mga letra */
+}
+
+/* Effect kapag pinindot (click) */
+.tire-action-red:active {
+    transform: scale(0.95); /* Lulubog nang kaunti */
+}
+
+
+/* Card Styling (No Borders) */
+.tire-cards-col { flex: 1 !important; display: flex !important; gap: 15px !important; }
+
+.tire-card-no-border {
+    flex: 1 !important;
+    height: 480px !important; /* Bahagyang liit para bumagay sa font */
+    background: #000 !important;
+    transform: skewX(-7deg) !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+    transition: 0.4s ease !important;
+}
+
+.tire-card-no-border:hover {
+    transform: skewX(-7deg) translateY(-8px) !important;
+}
+
+.tire-link-box { display: block !important; width: 100% !important; height: 100% !important; }
+
+.tire-img-clipper {
+    width: 160% !important; height: 100% !important;
+    margin-left: -30% !important;
+    transform: skewX(7deg) !important;
+    position: relative !important;
+}
+
+.tire-img-clipper img {
+    width: 100% !important; height: 100% !important;
+    object-fit: cover !important;
+    transition: 0.6s ease !important;
+}
+
+.tire-card-no-border:hover img { transform: scale(1.1) !important; }
+
+.tire-card-label {
+    position: absolute !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    padding: 30px 15px !important;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8)) !important;
+    color: #fff !important;
+    font-family: 'Arial', sans-serif !important;
+    font-weight: 800 !important;
+    font-style: italic !important;
+    font-size: 1.3rem !important; /* Liit din ng onti para proportioned */
+    text-align: center !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+    .tire-content-wrap { flex-direction: column !important; text-align: center !important; }
+    .tire-cards-col { flex-direction: column !important; }
+    .tire-card-no-border { transform: skewX(0) !important; height: 350px !important; }
+    .tire-img-clipper { transform: skewX(0) !important; width: 100% !important; margin: 0 !important; }
+}
+
+
+
+/* --- FOOTER MAIN --- */
+.modern-footer {
+    background: #000000;
+    color: white;
+    padding: 80px 0 0;
+    font-family: 'Poppins', sans-serif;
+    border-top: 2px solid #a00;
+}
+
+.footer-container {
+    max-width: 1550px;
+    margin: 0 auto;
+    padding: 0 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    flex: 0 1 auto; 
+}
+
+.brand-col {
+    max-width: 300px;
+}
+
+/* --- PRODUCT GRID (Ang 3-Column Layout) --- */
+.product-grid {
+    display: flex;
+    gap: 100px; /* Distansya sa pagitan ng Tires, Batt, at Other */
+}
+
+
+
+.product-grid ul { list-style: none; padding: 0; margin: 0; }
+.product-grid ul li { margin-bottom: 10px; }
+
+.product-grid ul li a, 
+.footer-links li a { 
+    color: #bbb; 
+    font-size: 0.85rem; 
+    text-decoration: none;
+    transition: 0.3s ease;
+    white-space: nowrap; /* Para hindi mag-break ang text sa gitna */
+}
+
+.product-grid ul li a:hover, 
+.footer-links li a:hover { 
+    color: #e10600;
+    padding-left: 5px;
+}
+
+/* --- HEADERS & LOGO --- */
+.footer-logo { width: 250px; margin-bottom: 25px; }
+.company-desc { font-size: 0.85rem; color: #bbb; line-height: 1.6; }
+.footer-col h4 { 
+    font-size: 1.1rem; 
+    margin-bottom: 30px; 
+    color: white; 
+    text-transform: uppercase; 
+    font-weight: 700;
+}
+
+/* --- CONTACT & SOCIALS --- */
+.contact-info { list-style: none; padding: 0; color: #bbb; font-size: 0.85rem; }
+.contact-info li { margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+.contact-info i { color: #e10600; font-size: 1rem; }
+
+.follow-text { margin-top: 25px; font-weight: 600; margin-bottom: 15px; text-transform: uppercase; font-size: 0.9rem; }
+.social-icons-only { display: flex; gap: 12px; }
+
+.social-icons-only a {
+    width: 40px; height: 40px; background: #1a1a1a;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    color: #fff; text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icons-only a:hover {
+    background: #e10600;
+    transform: translateY(-5px);
+}
+
+/* --- GOOGLE RATING BOX --- */
+.google-rating-box {
+    background: #111111;
+    padding: 12px 18px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-top: 25px;
+    border: 1px solid #222;
+}
+.rating-title { font-size: 0.65rem; color: #666; margin-bottom: 5px; text-transform: uppercase; }
+.rating-content { display: flex; align-items: center; gap: 12px; }
+.stars { color: #fbbc04; font-size: 0.9rem; }
+.score-num { color: #fff; font-weight: bold; font-size: 1.1rem; }
+
+/* --- BOTTOM BAR --- */
+.footer-bottom {
+    background: #000;
+    padding: 25px 0;
+    text-align: center;
+    border-top: 1px solid #111;
+}
+.footer-bottom p { font-size: 0.75rem; color: #555; margin: 0; }
+
+/* --- MOBILE RESPONSIVE --- */
+@media screen and (max-width: 992px) {
+    .product-grid { gap: 40px; } /* Paliitin ang gap sa tablet */
+}
+
+@media screen and (max-width: 768px) {
+    .footer-container { flex-direction: column; gap: 50px; text-align: left; }
+    .product-grid { flex-direction: column; gap: 30px; }
+    .footer-logo { width: 200px; }
+}
+.category-label {
+    /* SAME FONT AND SIZE AS LINKS */
+    font-size: 1rem; 
+    font-weight: 800; /* Bold para sa distinction pero same size */
+    color: white; /* Gray muna, mag-re-red sa hover */
+    
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 29px;
+    transition: 0.3s ease;
+    width: fit-content;
+}
+
+
+/* Hover Effect para sa main categories */
+.category-label:hover {
+    color: #cc0606; /* Magpapalit sa puti para mag-pop */
+    letter-spacing: 3px; /* Konting "stretch" effect sa hover */
+    cursor: pointer;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle { display: block; }
+    nav { display: none; width: 100%; }
+    nav.active { display: block; position: absolute; top: 100%; left: 0; background: var(--white); }
+    nav ul { flex-direction: column; }
+    .hero h2 { font-size: 2.2rem; }
+    .top-bar .container { flex-direction: column; text-align: center; gap: 5px; }
+}
+
+/* Hero Section */
+.about-hero {
+    background: linear-gradient(rgba(0, 45, 98, 0.8), rgba(0, 45, 98, 0.8)), 
+                url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=1500');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.breadcrumb {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.about-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+/* Intro */
+.intro-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.intro-section h2 {
+    font-size: 2.5rem;
+    color: var(--goodyear-blue);
+    margin-bottom: 20px;
+}
+
+.intro-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--text-gray);
+}
+
+/* Feature Blocks */
+.feature-block {
+    padding: 100px 0;
+}
+
+.bg-light { background-color: var(--bg-light); }
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.grid-2.reverse .image-content { order: 1; }
+.grid-2.reverse .text-content { order: 2; }
+
+.eyebrow {
+    color: var(--goodyear-blue);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+}
+
+.text-content h3 {
+    font-size: 2.2rem;
+    margin: 15px 0;
+    color: var(--goodyear-blue);
+}
+
+.image-content img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.btn-link {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: var(--goodyear-blue);
+    font-weight: 700;
+    border-bottom: 2px solid var(--goodyear-yellow);
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+.btn-link:hover {
+    color: var(--#ff3700);
+}
+
+/* Values Section */
+.values-section {
+    padding: 80px 0;
+    background: var(--goodyear-blue);
+    color: white;
+    text-align: center;
+}
+
+.values-section h3 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.value-card {
+    padding: 30px;
+    background: rgba(255,255,255,0.05);
+}
+
+.icon-box {
+    font-size: 2.5rem;
+    color: var(--#ff3700);
+    margin-bottom: 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .grid-2 { grid-template-columns: 1fr; gap: 40px; }
+    .grid-2.reverse .text-content { order: 1; }
+    .grid-2.reverse .image-content { order: 2; }
+    .about-hero h1 { font-size: 2.5rem; }
+}
+/*aboutus tab */
+/* Intro Section Styling */
+.intro-section {
+    background-color: #f4f5f7; /* Light gray background gaya ng screenshot */
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.intro-container {
+    max-width: 900px; /* Mas makitid para maganda ang bagsak ng text */
+    margin: 0 auto;
+}
+
+.intro-section h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #000000;
+    line-height: 1.1;
+    margin-bottom: 40px;
+    letter-spacing: -1px;
+}
+
+.intro-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    font-weight: 400;
+}
+/* Eto ang code para sa background image */
+
+
+/* Sub-Menu Styling */
+.sub-menu-bar {
+    background-color: #ffffff;
+    border-bottom: 2px solid #f0f0f0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.sub-menu-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sub-menu-list a {
+    display: block;
+    padding: 22px 25px;
+    text-decoration: none;
+    color: #0b1d44;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+/* Ang Yellow Indicator */
+.sub-menu-list li.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-color: #ff3700;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f5f7;
+}
+
+
+/* --- 1. Main Container (Centering & Bottom Alignment) --- */
+.categories-container {
+    position: absolute; 
+    bottom: 0;          
+    left: 50%;          
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1300px;  
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Nakatapak ang buong grid sa ilalim */
+    padding: 0;
+    margin: 0;
+}
+
+/* --- 2. Glass Grid (Transparent & Rounded Top) --- */
+.glass-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    width: 100%;
+    background: rgba(255, 255, 255, 0.08); 
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px 20px 0 0; 
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border: none; 
+}
+
+/* --- 3. Individual Category Card --- */
+.cat-card {
+    display: flex;
+    flex-direction: column;
+    /* Eto ang magtutulak sa font sa itaas at image sa ibaba */
+    justify-content: space-between; 
+    align-items: center;
+    height: 200px;      /* Fixed height para pantay ang taas ng font at images */
+    padding: 20px 0 0 0; /* Minimal top padding para dikit ang font sa taas */
+    text-decoration: none;
+    transition: 0.3s ease;
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.cat-card:last-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.cat-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* --- 4. Brand Name (Sagad sa Taas) --- */
+.brand-name {
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+    font-size: 1.2rem;       /* Iniangat ang size */
+    font-weight: 800;         /* Bold look */
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    margin-top: 0;            /* Siguradong walang gap sa taas */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* --- 5. Image Box (Sagad sa Ilalim) --- */
+.img-box {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;    /* Dikit sa sahig */
+    justify-content: center;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 0 !important; 
+}
+
+.img-box img {
+    width: auto;
+    max-width: 90%;           /* Pinalit nang konti para kasyas-kasya */
+    max-height: 150px;        /* Control sa taas ng image */
+    display: block !important; 
+    margin: 0 auto;
+    
+    /* Siguradong selyado sa dulo ng card */
+    transform: translateY(1px); 
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Hover: Aangat pero babalik sa selyadong base */
+.cat-card:hover .img-box img {
+    transform: translateY(-5px) scale(1.1);
+}
+
+/* --- 6. Mobile Optimization --- */
+@media (max-width: 768px) {
+    .glass-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cat-card {
+        height: 160px;
+    }
+    .brand-name {
+        font-size: 1rem;
+    }
+}
+.contact-stack {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column-reverse; /* Pinapaangat ang listahan */
+    align-items: center; /* Iisang linya lang lahat */
+    z-index: 10000;
+}
+
+/* Main Button & Tooltip */
+.main-trigger {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.tooltip {
+    position: absolute;
+    right: 80px; /* Sa kaliwa ng button lalabas ang text */
+    background: #c00d0d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    white-space: nowrap;
+    transition: 0.4s ease; /* Transition para sa pagkawala */
+}
+
+/* Base Style para sa Circles */
+.btn-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+     background-color: white;
+}
+
+.main-red { background: #ff1e1e; }
+
+/* Social Icons Wrapper */
+.social-icons-wrapper {
+    display: flex;
+    flex-direction: column-reverse; /* Iisang linya paangat */
+    gap: 15px;
+    margin-bottom: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px); /* Transition effect mula ilalim */
+    transition: 0.5s ease;
+}
+
+/* Kapag Clinick na (Active State) */
+.contact-stack.active .tooltip {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(10px);
+   
+}
+
+.contact-stack.active .social-icons-wrapper {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    
+}
+
+.btn-circle img { width: 30px; height: 30px; }
+/* --- FEATURE CTA ROW STYLE --- */
+.feature-cta-row {
+    padding: 50px 0;
+    background-color: #ffffff;
+    width: 100%;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.cta-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-block {
+    flex: 1;
+    padding: 0 50px;
+    text-align: left; /* Sinunod ang alignment sa screenshot */
+}
+
+/* Ang Vertical Line sa Gitna */
+.cta-middle-divider {
+    width: 1px;
+    height: 280px;
+    background: #dddddd;
+}
+
+.cta-icon i {
+    font-size: 2.8rem;
+    color: #a00; /* Maroon */
+    margin-bottom: 20px;
+}
+
+.cta-title {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cta-text {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    max-width: 420px;
+}
+
+/* --- THE ULTRA MODERN BUTTON (Maroon & Navy) --- */
+.ultra-modern-btn {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-label {
+    background: #a00; /* Maroon Base */
+    color: white;
+    padding: 13px 19px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    /* Slant Style mula sa reference */
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+    transition: 0.3s;
+}
+
+.btn-arrow-box {
+    background: #1a1a40; /* Dark Navy */
+    color: white;
+    padding: 14px 18px;
+    margin-left: -12px;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+/* Hover Effects */
+.ultra-modern-btn:hover {
+    transform: translateY(-3px);
+}
+
+.ultra-modern-btn:hover .btn-label {
+    background: #1a1a40; /* Nagpapalit kulay sa hover */
+}
+
+.ultra-modern-btn:hover .btn-arrow-box {
+    background: #a00;
+    padding-left: 25px;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 850px) {
+    .cta-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cta-block {
+        padding: 40px 20px;
+        text-align: center;
+    }
+    .cta-text {
+        margin: 0 auto 30px;
+    }
+    .cta-middle-divider {
+        width: 100px;
+        height: 1px;
+        margin: 20px 0;
+    }
+}
