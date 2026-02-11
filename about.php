@@ -1,36 +1,47 @@
 <?php include 'header.php'; ?>
 
-<section class="modern-hero" style="background-image: url('picture/[CSI] About Cover.png');">
-    <div class="hero-overlay">
-        <div class="hero-container">
-            <h1>About Us</h1>
-            <p>Behind Every Reliable Ride</p>
+<main class="main-page-wrapper">
+    <section class="modern-hero" style="background-image: url('picture/[CSI] About Cover.png');">
+        <div class="hero-overlay">
+            <div class="hero-container">
+                <h1>About Us</h1>
+                <p>Behind Every Reliable Ride</p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<nav class="sub-menu-bar">
-    <div class="sub-menu-container">
-        <div class="custom-select-box" id="subToggle">
-            <span>Who We Are</span> <i class="fas fa-chevron-down"></i>
+    <nav class="sub-menu-bar">
+        <div class="sub-menu-container">
+            <div class="custom-select-box" id="subToggle">
+                <span>Who We Are</span> <i class="fas fa-chevron-down"></i>
+            </div>
+            <ul class="sub-menu-list" id="subMenuList">
+                <li class="active"><a href="about.php">Who We Are</a></li>
+                <li><a href="missionandvision.php">Mission & Vision</a></li>
+                <li><a href="joinus.php">Join Us</a></li>
+            </ul>
         </div>
+    </nav>
 
-        <ul class="sub-menu-list" id="subMenuList">
-            <li class="active"><a href="about.php">Who We Are</a></li>
-            <li><a href="missionandvision.php">Mission & Vision</a></li>
-            <li><a href="joinus.php">Join Us</a></li>
-        </ul>
-    </div>
-</nav>
+    <div class="breadcrumb-area">
+        <nav class="breadcrumbs">
+            <a href="index.php"><i class="fas fa-home"></i></a>
+            <span class="separator">›</span>
+             <span class="current-page">About Us</span>
+            <span class="separator">›</span>
+            <span class="current-page">Who We Are</span>
 
-<section class="intro-section">
-    <div class="intro-container">
-        <h1>Get to know the brand that's devoted to driving excellence.</h1>
-        <p>
-            <strong>CALOOCAN STANDARD, INC.</strong> is a duly registered corporation with Securities and Exchange Commission under registration number A199724092 on January 02, 1998. Principal office located at 89 7th Avenue cor. B. Serrano Street, Grace Park, Caloocan City, with branch office at 130 6th St., between 6th and 7th Avenue, Grace Park Caloocan City, Philippines, and warehouse office at 15C IRC Compound, Paso De Blas, Valenzuela City.
-        </p>
+        </nav>
     </div>
-</section>
+
+    <section class="intro-section">
+        <div class="intro-container card-style">
+            <h1>Get to know the brand that's devoted to driving excellence.</h1>
+            <p>
+                <strong>CALOOCAN STANDARD, INC.</strong> is a duly registered corporation with Securities and Exchange Commission under registration number A199724092 on January 02, 1998. Principal office located at 89 7th Avenue cor. B. Serrano Street, Grace Park, Caloocan City, with branch office at 130 6th St., between 6th and 7th Avenue, Grace Park Caloocan City, Philippines, and warehouse office at 15C IRC Compound, Paso De Blas, Valenzuela City.
+            </p>
+        </div>
+    </section>
 
 <h3 class="scroll-guide">SCROLL DOWN TO EXPLORE OUR TIMELINE</h3>
 

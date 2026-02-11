@@ -578,23 +578,35 @@ margin-left: -15% !important;
 
 
 
-.product-grid ul { list-style: none; padding: 0; margin: 0; }
-.product-grid ul li { margin-bottom: 10px; }
+
+.product-grid ul, 
+.footer-links { 
+    list-style: none !important; 
+    padding: 0; 
+    margin: 0; 
+}
+
+/* Para maging pantay ang spacing ng list items sa lahat ng columns */
+.product-grid ul li,
+.footer-links li { 
+    margin-bottom: 8px; 
+}
 
 .product-grid ul li a, 
-.footer-links li a { 
-    color: #bbb; 
-    font-size: 0.85rem; 
+.footer-links li a {  
+    color: #bbb;  
+    font-size: 0.85rem;  
     text-decoration: none;
     transition: 0.3s ease;
-    white-space: nowrap; /* Para hindi mag-break ang text sa gitna */
+    display: inline-block; /* Para gumana nang maayos ang padding-left sa hover */
 }
 
 .product-grid ul li a:hover, 
-.footer-links li a:hover { 
-    color: #e10600;
+.footer-links li a:hover {  
+    color: #e10600; /* Red hover effect */
     padding-left: 5px;
 }
+
 
 /* --- HEADERS & LOGO --- */
 .footer-logo { width: 250px; margin-bottom: 25px; }

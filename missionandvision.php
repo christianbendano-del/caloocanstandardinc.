@@ -23,7 +23,15 @@
         </ul>
     </div>
 </nav>
-
+ <div class="breadcrumb-area">
+        <nav class="breadcrumbs">
+            <a href="index.php"><i class="fas fa-home"></i></a>
+            <span class="separator">›</span>
+            <span class="current-page">About Us</span>
+            <span class="separator">›</span>
+            <span class="current-page">Mission and Vision</span>
+        </nav>
+    </div>
 <section class="mission-vision-section" id="mission-vision">
     <div class="container">
         <div class="standard-header">

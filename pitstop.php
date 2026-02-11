@@ -90,7 +90,7 @@
                 <p class="overlay-subtitle">MAINTENANCE GUIDE</p>
                 <h2 class="overlay-title">Car-Care Tips</h2>
                 <p class="overlay-description">Keep your engine running like new with these expert tips.</p>
-                <a href="#" class="btn-discover">
+                <a href="carcaretips.php" class="btn-discover">
                     <span class="plus-icon">⊕</span> DISCOVER MORE
                 </a>
             </div>

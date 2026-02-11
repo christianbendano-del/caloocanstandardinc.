@@ -24,7 +24,12 @@
         elseif (in_array($current_page, ['joinus.php'])) {
             echo '<link rel="stylesheet" href="joinus.css">';
         }
-        
+         elseif (in_array($current_page, ['carcaretips.php','carcaretipsbatteries.php','carcaretipslubricants.php'])) {
+            echo '<link rel="stylesheet" href="carcaretips.css">';
+        }
+        elseif (in_array($current_page, ['footer.php'])) {
+            echo '<link rel="stylesheet" href="style.css">';
+        }
     ?>
     <link rel="icon" type="image/png" href="picture/csiicon.png">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">

@@ -380,7 +380,6 @@ body {
     scroll-behavior: smooth;
     padding: 15px 5px;
     scrollbar-width: none; /* Tinatago ang scrollbar sa Firefox */
-    
 }
 
 /* Tinatago ang scrollbar sa Chrome/Safari */
@@ -390,7 +389,7 @@ body {
 
 /* 3. News Card - Maliit na "Box" */
 .news-card {
-    min-width: 50px; /* Mas maliit na lapad */
+    min-width: 240px; /* Mas maliit na lapad */
     flex: 0 0 auto;
     background-color: #ffffff; 
     border-radius: 8px;
@@ -414,7 +413,7 @@ body {
 }
 
 .img-container img {
-    width: 70%;
+    width: 100%;
     height: 120px; /* PINAKAMALIIT NA HEIGHT SA DESKTOP */
     object-fit: cover;
     display: block;
@@ -535,7 +534,8 @@ body {
 }
 /*cartalks */
 
-
+/* Container adjustment */
+/* --- Modern News Container --- */
 .modern-news-container {
     padding: 60px 20px;
     background-color: #fff; 
@@ -546,7 +546,7 @@ body {
 .news-feed-overlay {
     display: flex;
     gap: 25px;
-    max-width: 1350px;
+    max-width: 1300px;
     width: 100%;
 }
 

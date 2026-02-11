@@ -1,0 +1,338 @@
+/* ==========================================================================
+   1. VARIABLES & RESET
+   ========================================================================== */
+:root {
+    --dark-gray: #1a1a1a;
+    --maroon: #800000;
+    --light-bg: #f5f5f5;
+    --cherry:  #D2042D;
+    --border-color: #ddd;
+    --text-muted: #666;
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-bg);
+    color: #333;
+    line-height: 1.5;
+}
+/* --- Breadcrumbs Styling --- */
+.breadcrumbs {
+    padding: 20px 0 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+    color: #333; /* Kulay ng links */
+    transition: 0.3s;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+    color: #D2042D;
+}
+
+.breadcrumbs .separator {
+    color: #999;
+    font-family: serif;
+    font-size: 1.1rem;
+}
+
+.breadcrumbs .current-page {
+    color: #666; /* Muted color para sa current page */
+}
+
+/* --- Page Title Styling --- */
+.page-main-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #444;
+    margin: 10px 0 25px 0;
+    font-family: sans-serif;
+}
+
+/* I-adjust ang Hero Banner para hindi masyadong dikit sa Title */
+.hero-banner {
+    margin-bottom: 20px;
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 768px) {
+    .page-main-title {
+        font-size: 1.8rem;
+    }
+    .breadcrumbs {
+        font-size: 0.8rem;
+        flex-wrap: wrap; /* Para hindi lumampas sa screen sa mobile */
+    }
+}
+/* ==========================================================================
+   2. LAYOUT CONTAINER
+   ========================================================================== */
+.carcare-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 15px;
+}
+
+/* ==========================================================================
+   3. HEADER & SOCIALS
+   ========================================================================== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5px 0;
+}
+
+.header h1 {
+    font-weight: 300;
+    font-size: 1.4rem;
+    color: #555;
+    margin: 0;
+}
+
+
+
+/* ==========================================================================
+   4. HERO BANNER
+   ========================================================================== */
+.hero-banner {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dark Overlay for Text Readability */
+.hero-banner::before {
+    content: "";
+    position: absolute;
+   
+    
+    z-index: 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: 2.2rem; /* Bahagyang pinalaki para sa impact */
+    font-weight: 800;
+    line-height: 1.1;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+/* --- Desktop Design (Minimalist) --- */
+.sub-menu-bar {
+    background-color:  var(--light-bg);
+    border-bottom: 2px solid #f0f0f0;
+    position: sticky;
+    top:0px;
+    z-index: 999;
+}
+
+.sub-menu-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0; padding: 0;
+}
+
+.custom-select-box { display: none; }
+
+/* --- MOBILE "FAIL-PROOF" CSS --- */
+@media screen and (max-width: 768px) {
+    /* SIGURADUHIN NA HINDI NAKATAGO ANG BAR */
+    .sub-menu-bar {
+        position: relative !important;
+        overflow: visible !important; /* PINAKAMAHALAGA: Para lumabas ang dropdown */
+        display: block !important;
+        background: #f4f5f7 !important;
+        padding: 10px 0 !important;
+        z-index: 2000 !important;
+    }
+
+    .sub-menu-container {
+        overflow: visible !important;
+        position: relative;
+    }
+
+    /* Ang Select Box (About Us) */
+    .custom-select-box {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        padding: 12px 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 0 20px;
+        cursor: pointer;
+    }
+
+    /* Ang Dropdown List */
+    .sub-menu-list {
+        display: none !important; /* Default: Tago */
+        flex-direction: column !important;
+        position: absolute !important; /* Nakatali sa sub-menu-bar */
+        top: 100% !important; /* Lalabas sa mismong ilalim ng box */
+        left: 20px !important;
+        right: 20px !important;
+        background: #ffffff !important;
+        border: 1px solid #ccc !important;
+        border-top: none !important;
+        border-radius: 0 0 5px 5px !important;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+        z-index: 99999 !important; /* Higit pa sa timeline at hero */
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Class na itotoggle ng JS */
+    .sub-menu-list.is-open {
+        display: block !important;
+    }
+
+    .sub-menu-list li {
+        width: 100% !important;
+        border-bottom: 1px solid #eee !important;
+    }
+
+    .sub-menu-list li a {
+        display: block !important;
+        padding: 15px 20px !important;
+        color: #333 !important;
+        text-transform: none !important; /* Mas malinis tignan sa mobile */
+    }
+}
+/* Grid adjustment */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+/* ==========================================================================
+   6. GRID SYSTEM & CARDS
+   ========================================================================== */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.grid-item {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    background: white;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.grid-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    border-color: var(--maroon);
+}
+
+.img-wrapper {
+    height: 180px; /* Inadjust para sa mas compact na look */
+    overflow: hidden;
+    background-color: #eee;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: var(--transition);
+}
+
+.grid-item:hover img {
+    transform: scale(1.08);
+}
+
+/* --- Label / Footer ng Card --- */
+.label {
+    background-color: var(--dark-gray);
+    color: white;
+    padding: 10px 15px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.grid-item:hover .label {
+    background-color: var(--maroon);
+}
+
+.label span:last-child {
+    font-size: 10px;
+    opacity: 0.6;
+}
+
+/* ==========================================================================
+   7. RESPONSIVE DESIGN
+   ========================================================================== */
+
+/* Tablet View */
+@media (max-width: 900px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hero-banner {
+        height: 250px;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    .hero-banner {
+        height: 180px;
+        padding: 0 20px;
+    }
+    .hero-text {
+        font-size: 1.5rem;
+    }
+    .sub-menu-carcare ul {
+        gap: 15px;
+        overflow-x: auto; /* Scrollable menu sa mobile */
+        padding-bottom: 5px;
+    }
+    .sub-menu-carcare ul li a {
+        font-size: 0.75rem;
+        white-space: nowrap;
+    }
+    .carcare-container {
+        padding: 5px 10px;
+    }
+}

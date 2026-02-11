@@ -1,5 +1,5 @@
 <?php include 'header.php'; ?>
-
+<main class="main-page-wrapper">
 <section class="modern-hero" style="background-image: url('picture/[CSI] About Cover.png');">
     <div class="hero-overlay">
         <div class="hero-container">
@@ -7,7 +7,7 @@
             <p>Career in Motion</p>
         </div>
     </div>
-
+</section>
     <nav class="sub-menu-bar">
         <div class="sub-menu-container">
             <div class="custom-select-box" id="subToggle">
@@ -21,10 +21,21 @@
             </ul>
         </div>
     </nav>
-</section>
+<div class="breadcrumb-area">
+        <nav class="breadcrumbs">
+            <a href="index.php"><i class="fas fa-home"></i></a>
+            <span class="separator">›</span>
+             <span class="current-page">About Us</span>
+            <span class="separator">›</span>
+            <span class="current-page">Join Us</span>
+        </nav>
+    </div>
 
+ 
 <section class="join-us-section">
+
     <div class="application-container">
+
         <div class="form-header-box">
             <h2 class="form-title">Join Our Team</h2>
             <p>Drive your career forward with Caloocan Standard! Join our team and make an impact in tires, batteries, and lubricants—where innovation meets opportunity.</p>
