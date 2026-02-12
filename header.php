@@ -77,7 +77,7 @@
                         <ul class="sub-menu">
                             <li><a href="tires.php">Tires</a></li>
                             <li><a href="batteries.php">Batteries</a></li>
-                            <li><a href="lubricants.php">Lubricants</a></li>
+                            
                             <li><a href="tubeandflaps.php">Others</a></li>
                         </ul>
                     </li>
