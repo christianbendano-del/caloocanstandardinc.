@@ -29,7 +29,7 @@
                     </div>
                 </a>
 
-                <a href="lubricants.php" class="cat-card">
+                <a href="tubeandflaps.php" class="cat-card">
                     <div class="cat-label"><span class="brand-name">LUBRICANTS</span></div>
                     <div class="img-box">
                         <img src="picture/[CSI] Home Category Photo - Lubricants.png" alt="Lubricants">
@@ -139,7 +139,7 @@
     }
 
     .tire-img-clipper { position: relative; overflow: hidden; background: #000; clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%); }
-    .tagline { font-size: 30px; font-weight: normal; color: #666; margin-top: 5px; letter-spacing: 1px; }
+    .tagline { font-size: 29px; font-weight: normal; color: black; margin-top: 5px; letter-spacing: 1px; }
 </style>
 
 <script>

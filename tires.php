@@ -19,7 +19,7 @@
             <div class="category-tabs" id="categoryMenu">
                 <a href="tires.php" class="tab-btn active">Tires</a>
                 <a href="batteries.php" class="tab-btn">Batteries</a>
-                <a href="lubricants.php" class="tab-btn">Lubricants</a>
+               
                <a href="tubeandflaps.php" class="tab-btn">Others</a>
             </div>
         </div>

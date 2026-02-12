@@ -264,3 +264,32 @@ function scrollNews(amount) {
         behavior: 'smooth'
     });
 }
+
+
+// car care essentials labels
+// Hover Highlight
+function highlightText(id) {
+    const block = document.getElementById(id);
+    if (block) block.classList.add('active-highlight');
+}
+
+function removeHighlight(id) {
+    const block = document.getElementById(id);
+    if (block) block.classList.remove('active-highlight');
+}
+
+// Click to Scroll & Permanent Highlight
+function scrollToSection(id) {
+    const element = document.getElementById(id);
+    if (element) {
+        element.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'center' 
+        });
+        
+        // Alisin ang highlight sa lahat bago i-highlight ang bago
+        document.querySelectorAll('.info-block').forEach(b => b.classList.remove('clicked-highlight'));
+        // Dagdag permanent highlight sa kinlik
+        element.classList.add('clicked-highlight');
+    }
+}

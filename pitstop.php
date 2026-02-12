@@ -87,7 +87,7 @@
         <div class="overlay-card">
             <div class="card-bg-img" style="background-image: url('picture/[CSI]\ Home\ Pitstop\ -\ Car\ Care\ Tips.png');"></div>
             <div class="overlay-content">
-                <p class="overlay-subtitle">MAINTENANCE GUIDE</p>
+                <p class="overlay-subtitle">Maintenance Guide</p>
                 <h2 class="overlay-title">Car-Care Tips</h2>
                 <p class="overlay-description">Keep your engine running like new with these expert tips.</p>
                 <a href="carcaretips.php" class="btn-discover">
@@ -99,10 +99,10 @@
         <div class="overlay-card">
             <div class="card-bg-img" style="background-image: url('picture/[CSI]\ Home\ Pitstop\ -\ Car\ Talks.png');"></div>
             <div class="overlay-content">
-                <p class="overlay-subtitle">COMMUNITY HUB</p>
-                <h2 class="overlay-title">Car Talks</h2>
+                <p class="overlay-subtitle">Basic Car Knowledge</p>
+                <h2 class="overlay-title">Car Care Essentials</h2>
                 <p class="overlay-description">Join the conversation about the future of automotive tech.</p>
-                <a href="#" class="btn-discover">
+                <a href="carcareessentials.php" class="btn-discover">
                     <span class="plus-icon">⊕</span> DISCOVER MORE
                 </a>
             </div>

@@ -424,7 +424,7 @@ header {
     position: relative !important;
     z-index: 10 !important;
     display: flex !important;
-    max-width: 1800px !important;
+    max-width: 1400px !important;
     margin: 0 auto !important;
     width: 89% !important;
     gap: 40px !important;
@@ -571,7 +571,7 @@ margin-left: -15% !important;
 }
 
 /* --- PRODUCT GRID (Ang 3-Column Layout) --- */
-.product-grid {
+.products-grid {
     display: flex;
     gap: 100px; /* Distansya sa pagitan ng Tires, Batt, at Other */
 }
@@ -579,7 +579,7 @@ margin-left: -15% !important;
 
 
 
-.product-grid ul, 
+.products-grid ul, 
 .footer-links { 
     list-style: none !important; 
     padding: 0; 
@@ -587,12 +587,12 @@ margin-left: -15% !important;
 }
 
 /* Para maging pantay ang spacing ng list items sa lahat ng columns */
-.product-grid ul li,
+.products-grid ul li,
 .footer-links li { 
     margin-bottom: 8px; 
 }
 
-.product-grid ul li a, 
+.products-grid ul li a, 
 .footer-links li a {  
     color: #bbb;  
     font-size: 0.85rem;  
@@ -601,7 +601,7 @@ margin-left: -15% !important;
     display: inline-block; /* Para gumana nang maayos ang padding-left sa hover */
 }
 
-.product-grid ul li a:hover, 
+.products-grid ul li a:hover, 
 .footer-links li a:hover {  
     color: #e10600; /* Red hover effect */
     padding-left: 5px;
@@ -660,7 +660,7 @@ margin-left: -15% !important;
     text-align: center;
     border-top: 1px solid #111;
 }
-.footer-bottom p { font-size: 0.75rem; color: #555; margin: 0; }
+.footer-bottom p { font-size: 0.75rem; color: #D3D3D3; margin: 0; }
 
 /* --- MOBILE RESPONSIVE --- */
 @media screen and (max-width: 992px) {

@@ -19,7 +19,7 @@
             <div class="category-tabs" id="categoryMenu">
                 <a href="tires.php" class="tab-btn">Tires</a>
                 <a href="batteries.php" class="tab-btn">Batteries</a>
-                <a href="lubricants.php" class="tab-btn">Lubricants</a>
+                
                 <a href="tubeandflaps.php" class="tab-btn active">Others</a>
             </div>
         </div>
@@ -33,7 +33,12 @@
     <a href="#" class="brand-card">
         <div class="brand-img-box"><img src="picture/matrix-logo.png" alt="Others"></div>
     </a>
-    
+      <a href="#" class="brand-card">
+        <div class="brand-img-box"><img src="picture/LUBRICANTS/eiffellogo.jpg" alt="Eiffel"></div>
+    </a>
+    <a href="#" class="brand-card">
+        <div class="brand-img-box"><img src="picture/LUBRICANTS/samiclogo.jpg" alt="samic"></div>
+    </a>
 </div>
     </div>
 </section>

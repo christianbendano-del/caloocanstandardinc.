@@ -3,7 +3,7 @@
 <section class="modern-hero" style="background-image: url('picture/samplepic.jpg');">
     <div class="hero-overlay">
         <div class="hero-container">
-            <h1>Tires</h1>
+            <h1>Others</h1>
             <p>Establishing the GOLD standard in the automotive industry— Our Caloocan way.</p>
         </div>
     </div>
@@ -15,14 +15,14 @@
         
         <div class="category-nav-wrapper">
             <div class="mobile-select-trigger" id="categoryToggle">
-                <span id="current-category-name">Tires</span> 
+                <span id="current-category-name">Others</span> 
                 <i class="fas fa-chevron-down"></i>
             </div>
 
-            <div class="category-tabs" id="categoryMenu">
-                <a href="carcaretips.php" class="tab-btn active">Tires</a>
+           <div class="category-tabs" id="categoryMenu">
+                <a href="carcaretips.php" class="tab-btn ">Tires</a>
                 <a href="carcaretipsbatteries.php" class="tab-btn">Batteries</a>
-                <a href="carcaretipsothers.php" class="tab-btn">Others</a>
+                <a href="carcaretipsothers.php" class="tab-btn active">Others</a>
                
             </div>
         </div>
@@ -34,13 +34,13 @@
             </div>
         </div>
 
-       <div class="carcare-grid" id="tires-grid">
+        <div class="carcare-grid" id="tires-grid">
             
             <a href="tire-structure.php" class="info-card">
                 <div class="info-img-box">
                     <img src="picture/samplepic.jpg" alt="Structure">
                     <div class="info-label">
-                        <span>HOW TO CHOOSE TIREN</span>
+                        <span>FUNCTION</span>
                         <i class="fas fa-caret-right"></i>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                 <div class="info-img-box">
                     <img src="picture/samplepic.jpg" alt="Materials">
                     <div class="info-label">
-                        <span>HOW TO MAXIMIZE TIRE</span>
+                        <span>ANATOMY OF TIRES</span>
                         <i class="fas fa-caret-right"></i>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                 <div class="info-img-box">
                     <img src="picture/samplepic.jpg" alt="Functions">
                     <div class="info-label">
-                        <span>5 MUST DO BEFORE A TRIP</span>
+                        <span>SPECIFICATIONS</span>
                         <i class="fas fa-caret-right"></i>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                 <div class="info-img-box">
                     <img src="picture/samplepic.jpg" alt="Variety">
                     <div class="info-label">
-                        <span>WHEN TO REPLACE</span>
+                        <span>TYPES OF TIRES</span>
                         <i class="fas fa-caret-right"></i>
                     </div>
                 </div>
@@ -87,10 +87,11 @@
         <a href="pitstop.php" class="related-card">
             <span>PITSTOP</span>
         </a>
-        <a href="carcareessentials.php" class="related-card">
-            <span>CAR CARE ESSENTIALS</span>
+        <a href="carcaretips.php" class="related-card">
+            <span>CAR CARE TIPS</span>
         </a>
     </div>
 </div>
 <?php include 'footer.php'; ?>
+
 

@@ -46,7 +46,7 @@
             <h4>Company</h4>
             <ul class="footer-links">
                 <li><a href="index.php">Home</a></li>
-                <li><a href="aboutus.php">About Us</a></li>
+                <li><a href="about.php">About Us</a></li>
                 <li><a href="tires.php">Products</a></li>
                 <li><a href="pitstop.php">Pitstop</a></li>
                 <li><a href="beadealer.php">Be a dealer</a></li>
@@ -54,7 +54,7 @@
         </div>
 
         <div class="footer-col content-col">
-            <div class="product-grid">
+            <div class="products-grid">
                 <div class="grid-column">
                     <a href="tires.php" class="category-label">TIRES</a>
                     <ul>
@@ -117,7 +117,7 @@
         $current_page = basename($_SERVER['PHP_SELF']); 
         
         // Pagsamahin ang mga pages na nangangailangan ng confetti gamit ang OR (||)
-        if ($current_page == 'joinus.php' || $current_page == 'missionandvision.php'|| $current_page == 'index.php'|| $current_page == 'about.php'|| $current_page == 'tires.php'|| $current_page == 'tubeandflap.php'|| $current_page == 'beadealer.php'|| $current_page == 'pitstop.php'|| $current_page == 'batteries.php'|| $current_page == 'lubricants.php') {
+        if ($current_page == 'joinus.php' || $current_page == 'missionandvision.php'|| $current_page == 'index.php'|| $current_page == 'about.php'|| $current_page == 'tires.php'|| $current_page == 'tubeandflap.php'|| $current_page == 'beadealer.php'|| $current_page == 'pitstop.php'|| $current_page == 'batteries.php'|| $current_page == 'lubricants.php'|| $current_page == 'carcareessentials.php'|| $current_page == 'carcareessentialsbatteries.php'|| $current_page == 'carcareessentialslubricants.php'|| $current_page == 'carcaretips.php'|| $current_page == 'carcaretipsbatteries.php'|| $current_page == 'carcaretipsothers.php'|| $current_page == 'ccefunction.php') {
             echo '<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>';
         }
     ?>

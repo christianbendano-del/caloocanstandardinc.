@@ -1,0 +1,143 @@
+/* --- FUNCTION SECTION GENERAL --- */
+.function-section {
+    padding: 60px 0;
+    background: whitesmoke;
+}
+
+.page-main-title {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 28px;
+    text-transform: uppercase;
+    
+    /* WIDTH ADJUSTMENT */
+    max-width: 1200px; /* Sukat ng lapad */
+    margin: 0 auto 40px auto; /* I-center ang title at lagyan ng space sa ilalim */
+    
+    text-align: left; /* Pwedeng 'center' kung gusto mong nasa gitna ang text */
+}
+.function-image-wrapper {
+    text-align: center;
+    margin-bottom: 50px;
+    width: 100%; /* Siguraduhing sakop ang buong lapad ng container */
+}
+
+.center-tire-only {
+    width: 80%; /* Lakihan ang percentage depende sa gusto mong laki (halimbawa: 80% o 100%) */
+    max-width: 900px; /* Nilalagyan natin ng limit para hindi mag-pixelate sa sobrang laking screen */
+    height: auto; /* Para hindi ma-stretch ang image */
+    display: inline-block;
+    transition: transform 0.3s ease; /* Optional: para sa smooth effect */
+}
+
+/* Kung gusto mong mas malaki pa kapag naka-desktop */
+@media (min-width: 1200px) {
+    .center-tire-only {
+        max-width: 1100px; 
+    }
+}
+
+/* --- INFO BLOCKS (RED LINE DESIGN) --- */
+.function-content {
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+}
+
+.info-block {
+    margin-bottom: 30px;
+    padding: 15px 20px;
+    border-left: 3px solid #eee; /* Light grey default */
+    transition: all 0.3s ease;
+}
+
+/* Active State (Hover o Click) */
+.info-block.active-highlight, 
+.info-block.clicked-highlight {
+    border-left: 3px solid #E21B24; /* Red Line */
+    background-color: rgba(226, 27, 36, 0.03);
+}
+
+.info-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 8px;
+}
+
+.info-num {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 18px;
+    color: #ccc;
+}
+
+.info-block.active-highlight .info-num,
+.info-block.clicked-highlight .info-num {
+    color: #E21B24;
+}
+
+.info-block h4 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    color: #000;
+}
+
+.info-block.active-highlight h4,
+.info-block.clicked-highlight h4 {
+    color: #E21B24;
+}
+
+/* --- INTERACTIVE GRID (LANDSCAPE) --- */
+.interactive-container-landscape {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.ls-card {
+    border: 1px solid #333;
+    cursor: pointer;
+    background: #fff;
+    transition: 0.3s;
+}
+
+.ls-image {
+    width: 100%;
+    aspect-ratio: 25 / 9;
+    overflow: hidden;
+}
+
+.ls-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ls-label {
+    background-color: black;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #333;
+}
+
+.ls-label span {
+    font-weight: 800;
+    font-size: 11px;
+    color: white;
+}
+
+.ls-card:hover .ls-label {
+    background-color: #E21B24;
+}
+
+.ls-card:hover .ls-label span, 
+.ls-card:hover .ls-label i {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .interactive-container-landscape { grid-template-columns: 1fr; }
+}

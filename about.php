@@ -23,22 +23,12 @@
         </div>
     </nav>
 
-    <div class="breadcrumb-area">
-        <nav class="breadcrumbs">
-            <a href="index.php"><i class="fas fa-home"></i></a>
-            <span class="separator">›</span>
-             <span class="current-page">About Us</span>
-            <span class="separator">›</span>
-            <span class="current-page">Who We Are</span>
-
-        </nav>
-    </div>
-
+   
     <section class="intro-section">
         <div class="intro-container card-style">
             <h1>Get to know the brand that's devoted to driving excellence.</h1>
             <p>
-                <strong>CALOOCAN STANDARD, INC.</strong> is a duly registered corporation with Securities and Exchange Commission under registration number A199724092 on January 02, 1998. Principal office located at 89 7th Avenue cor. B. Serrano Street, Grace Park, Caloocan City, with branch office at 130 6th St., between 6th and 7th Avenue, Grace Park Caloocan City, Philippines, and warehouse office at 15C IRC Compound, Paso De Blas, Valenzuela City.
+                <strong>CALOOCAN STANDARD, INC.</strong> is a duly registered corporation with Securities and Exchange Commission under registration number A199724092 on January 02, 1998. Principal office located at 89 7th Avenue cor. B. Serrano Street, Grace Park, Caloocan City, with branch office at 130 6th St., between 6th and 7th Avenue, Grace Park Caloocan City, Philippines.
             </p>
         </div>
     </section>
@@ -139,7 +129,7 @@
                 </div>
             </div>
         </div>
-    </div>
+   </div>
 </section>
-
+ 
 <?php include 'footer.php'; ?>

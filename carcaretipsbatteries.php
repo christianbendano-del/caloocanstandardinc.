@@ -1,65 +1,96 @@
 <?php include 'header.php'; ?>
 
-
-
-<div class="carcare-container">
-  <div class="carcare-container">
-    <nav class="breadcrumbs">
-        <a href="index.php"><i class="fas fa-home"></i></a>
-        <span class="separator">›</span>
-        <a href="pitstop.php">PITSTOP</a>
-        <span class="separator">›</span>
-        <span class="current-page">Car-Care Tips</span>
-    </nav>
-
-    <h1 class="page-main-title">Basic Knowledge of Batteries</h1>
-
-   
-    <?php $main_banner = "picture/samplepic.jpg"; ?>
-
-    <section class="hero-banner" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('<?= $main_banner ?>');">
-        <div class="hero-text">
-           Car Care<br>
-           Tips
+<section class="modern-hero" style="background-image: url('picture/samplepic.jpg');">
+    <div class="hero-overlay">
+        <div class="hero-container">
+            <h1>Batteries</h1>
+            <p>Establishing the GOLD standard in the automotive industry— Our Caloocan way.</p>
         </div>
-    </section>
-<nav class="sub-menu-bar">
-        <div class="sub-menu-container">
-            <div class="custom-select-box" id="subToggle">
-                <span>Tires</span> <i class="fas fa-chevron-down"></i>
+    </div>
+</section>
+
+<section class="product-categories">
+    <div class="container">
+        <h2 class="category-title">CAR CARE TIPS</h2>
+        
+        <div class="category-nav-wrapper">
+            <div class="mobile-select-trigger" id="categoryToggle">
+                <span id="current-category-name">Batteries</span> 
+                <i class="fas fa-chevron-down"></i>
             </div>
 
-            <ul class="sub-menu-list" id="subMenuList">
-                <li><a href="carcaretips.php">Tires</a></li>
-                <li class="active"><a href="carcaretipsbatteries.php">Batteries</a></li>
-                <li><a href="carcaretipslubricants.php">Lubricants</a></li>
-            </ul>
+            <div class="category-tabs" id="categoryMenu">
+                <a href="carcaretips.php" class="tab-btn">Tires</a>
+                <a href="carcaretipsbatteries.php" class="tab-btn  active">Batteries</a>
+                <a href="carcaretipsothers.php" class="tab-btn">Others</a>
+               
+            </div>
         </div>
-    </nav>
-    <section class="grid-container">
-        <?php
-        $items = [
-            ['title' => 'Structure', 'img' => 'picture/samplepic.jpg'],
-            ['title' => 'Materials', 'img' => 'picture/samplepic.jpg'],
-            ['title' => 'Functions and performances', 'img' => 'picture/samplepic.jpg'],
-            ['title' => 'Variety of tires', 'img' => 'picture/samplepic.jpg'],
-            ['title' => 'Trivia', 'img' => 'picture/samplepic.jpg']
-        ];
 
-        foreach ($items as $item): ?>
-            <a href="#" class="grid-item">
-                <article>
-                    <div class="img-wrapper">
-                        <img src="<?= $item['img'] ?>" alt="<?= $item['title'] ?>">
+        <div class="middle-search-wrapper">
+            <div class="modern-search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" id="brandSearch" placeholder="Search categories..." onkeyup="filterCategories()">
+            </div>
+        </div>
+
+        <div class="carcare-grid" id="tires-grid">
+            
+            <a href="tire-structure.php" class="info-card">
+                <div class="info-img-box">
+                    <img src="picture/samplepic.jpg" alt="Structure">
+                    <div class="info-label">
+                        <span>FUNCTION</span>
+                        <i class="fas fa-caret-right"></i>
                     </div>
-                    <div class="label">
-                        <span><?= strtoupper($item['title']) ?></span> 
-                        <span style="font-size: 10px; opacity: 0.6;">┘</span>
-                    </div>
-                </article>
+                </div>
             </a>
-        <?php endforeach; ?>
-    </section>
-</div>
 
+            <a href="tire-materials.php" class="info-card">
+                <div class="info-img-box">
+                    <img src="picture/samplepic.jpg" alt="Materials">
+                    <div class="info-label">
+                        <span>ANATOMY OF TIRES</span>
+                        <i class="fas fa-caret-right"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="tire-functions.php" class="info-card">
+                <div class="info-img-box">
+                    <img src="picture/samplepic.jpg" alt="Functions">
+                    <div class="info-label">
+                        <span>SPECIFICATIONS</span>
+                        <i class="fas fa-caret-right"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="tire-variety.php" class="info-card">
+                <div class="info-img-box">
+                    <img src="picture/samplepic.jpg" alt="Variety">
+                    <div class="info-label">
+                        <span>TYPES OF TIRES</span>
+                        <i class="fas fa-caret-right"></i>
+                    </div>
+                </div>
+            </a>
+
+           
+
+        </div>
+    </div>
+</section>
+<div class="related-links-container">
+    <h3 class="related-title">RELATED LINKS</h3>
+    <div class="related-grid">
+        <a href="pitstop.php" class="related-card">
+            <span>PITSTOP</span>
+        </a>
+        <a href="carcaretips.php" class="related-card">
+            <span>CAR CARE TIPS</span>
+        </a>
+    </div>
+</div>
 <?php include 'footer.php'; ?>
+

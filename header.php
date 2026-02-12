@@ -24,11 +24,13 @@
         elseif (in_array($current_page, ['joinus.php'])) {
             echo '<link rel="stylesheet" href="joinus.css">';
         }
-         elseif (in_array($current_page, ['carcaretips.php','carcaretipsbatteries.php','carcaretipslubricants.php'])) {
-            echo '<link rel="stylesheet" href="carcaretips.css">';
+         elseif (in_array($current_page, ['carcareessentials.php','carcareessentialsbatteries.php','carcareessentialslubricants.php','carcaretips.php','carcaretipsothers.php','carcaretipsbatteries.php'])) {
+            echo '<link rel="stylesheet" href="carcareessentials.css">';
         }
         elseif (in_array($current_page, ['footer.php'])) {
             echo '<link rel="stylesheet" href="style.css">';
+        } elseif (in_array($current_page, ['ccefunction.php'])) {
+            echo '<link rel="stylesheet" href="cce.css">';
         }
     ?>
     <link rel="icon" type="image/png" href="picture/csiicon.png">
