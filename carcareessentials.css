@@ -86,7 +86,7 @@
 .info-card:hover { transform: translateY(-8px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
 .info-img-box img {
-    width: 100%; aspect-ratio: 25 / 10; object-fit: cover; display: block;
+    width: 100%; aspect-ratio: 15 / 9; object-fit: cover; display: block;
 }
 
 /* Ang Black Label sa ilalim */

@@ -52,7 +52,7 @@
 
     <details class="table-dropdown">
         <summary class="dropdown-button">
-            VIEW COMPARISON TABLE
+            TUBELESS TIRES VS. TUBE TIRES
             <span class="arrow">▼</span>
         </summary>
         
@@ -61,7 +61,7 @@
                 <thead>
                     <tr>
                         <th>FEATURES</th>
-                        <th>Tubeless Tire</th>
+                        <th>Tubeless Tires</th>
                         <th>Tube Tires</th>
                     </tr>
                 </thead>
@@ -94,13 +94,13 @@
  <div class="info-block">
     <div class="info-header">
         <span class="info-num">06</span>
-        <h4 class="info-title">Skeleton of Tire</h4>
+        <h4 class="info-title">Carcass: Skeleton of Tire</h4>
     </div>
     <p class="info-desc">Composed of texted fiber cords embedded into the rubber Provides the tire flexibility, and strength, allowing it to withstand the pressures of the road.</p>
 
     <details class="table-dropdown">
         <summary class="dropdown-button">
-            VIEW COMPARISON TABLE
+            BIAS VS. RADIAL 
             <span class="arrow">▼</span>
         </summary>
         

@@ -254,3 +254,282 @@
     line-height: 1.4;
     vertical-align: top;
 }
+/* --- MOBILE RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+    /* Binabawasan ang margin ng container para sa maliit na screen */
+    .function-content {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    /* Inaadjust ang alignment ng info-block sa mobile */
+    .info-block {
+        padding-left: 15px;
+    }
+
+    .info-desc, .table-dropdown {
+        margin-left: 0; /* Tinatanggal ang malaking indent para magkasya ang text */
+        margin-top: 10px;
+    }
+
+    /* --- THE TABLE SCROLL --- */
+    .table-wrapper {
+        padding: 10px;
+        overflow-x: auto; /* Pinaka-importante: Pinapayagan ang pag-swipe pakanan */
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .comparison-table {
+        min-width: 600px; /* Sinisiguro na hindi mag-squish ang columns */
+        font-size: 0.8rem; /* Mas maliit na font para sa mobile */
+    }
+
+    .comparison-table th, .comparison-table td {
+        padding: 8px;
+    }
+}
+.cell-list {
+    margin: 5px 0;
+    padding-left: 15px;
+    list-style-type: "- "; /* Mula sa image */
+}
+
+.cell-list li {
+    font-size: 0.85rem;
+    line-height: 1.2;
+}
+
+/* specifications tab */
+
+/* --- 1. DROPDOWN CONTAINER MAY BORDER NA --- */
+.speed-table-dropdown {
+    margin: 20px 0 0 55px;
+    background: #ffffff;
+    /* Nagdagdag tayo ng border at border-radius para kurbada ang kanto */
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    overflow: hidden; /* Para hindi lumampas ang table sa kurbada ng border */
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+/* Kapag naka-hover sa buong dropdown box */
+.speed-table-dropdown:hover {
+    border-color: #d32f2f; /* Mag-iiba ang kulay ng border pag tinapatan */
+}
+
+/* --- 2. DROPDOWN BUTTON (SUMMARY) --- */
+.speed-dropdown-btn {
+    padding: 15px;
+    font-size: 0.9rem;
+    font-weight: 800;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background-color: #fcfcfc; /* Light background para sa button */
+}
+
+/* Lalagyan ng line sa ilalim ng button kapag BUKAS ang dropdown */
+.speed-table-dropdown[open] .speed-dropdown-btn {
+    border-bottom: 1px solid #eee;
+}
+
+/* --- 3. ANIMATION & TABLE --- */
+.speed-table-dropdown[open] .speed-table-wrapper {
+    animation: anatomyFadeIn 0.5s ease-out;
+}
+
+@keyframes anatomyFadeIn {
+    0% { opacity: 0; transform: translateY(-5px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.speed-table-wrapper {
+    overflow-x: auto;
+    background: #ffffff;
+    padding: 10px; /* Space sa loob ng border */
+}
+
+/* --- 4. SPEED INDEX TABLE (WHITE BORDER ROWS) --- */
+.speed-index-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 2px;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.speed-index-table th {
+    background-color: #1e2749;
+    color: #ffffff;
+    padding: 12px 5px;
+    font-weight: 900;
+}
+
+.speed-index-table td {
+    padding: 10px 5px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #ffffff; /* Ang white divider */
+    transition: background-color 0.2s ease;
+}
+
+/* Row Hover gaya ng Anatomy tab */
+.speed-index-table tbody tr:hover td {
+    background-color: #f2f2f2 !important;
+}
+/* Arrow Icon Rotation */
+.speed-table-dropdown[open] .arrow {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+/* Gray column (Index) */
+.bg-gray {
+    background-color: #bdc3c7 !important;
+    font-weight: bold;
+    border-right: 2px solid #ffffff !important;
+}
+
+/* Mobile responsive margin reset */
+@media screen and (max-width: 768px) {
+    .speed-table-dropdown {
+        margin-left: 0;
+    }
+}
+
+/* Ang box na itatapat natin sa margin ng mga dropdown tables */
+.markings-container-box {
+    margin: 15px 0 0 55px; /* Itinatapat sa simula ng title text */
+    background-color: whitesmoke;
+    border: 1px solid #ddd; /* Katulad ng border ng dropdown box */
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 10px 15px;
+}
+
+.markings-list-final {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.markings-list-final li {
+    font-size: 0.8rem; /* Compact size gaya ng table content */
+    line-height: 1.6;
+    color: #333;
+    padding: 6px 0;
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid #f0f0f0; /* Divider line sa bawat item */
+}
+
+/* Para sa labels (T/TL, DOT, etc.) */
+.markings-list-final li span {
+    font-weight: 800;
+    color: #1e2749; /* Dark blue matching table headers */
+    min-width: 170px; /* Pantay na alignment ng descriptions */
+    display: inline-block;
+}
+
+/* Alisin ang border sa huli para malinis */
+.markings-list-final li:last-child {
+    border-bottom: none;
+}
+
+/* Hover effect para maging interactive */
+.markings-list-final li:hover {
+    background-color: #f9f9f9;
+    color: #d32f2f;
+    padding-left: 5px; /* Kaunting galaw pag hover */
+    transition: all 0.2s ease;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .markings-container-box {
+        margin-left: 0; /* Full width sa mobile */
+    }
+    
+    .markings-list-final li {
+        flex-direction: column; /* Mag-stack ang label at desc sa phone */
+    }
+}
+/* types of tires tab */
+/* Container Alignment - Itatapat sa ilalim ng title text */
+.simple-image-dropdown {
+    margin: 15px 0 0 55px; /* Alignment base sa margin ng table */
+    width: fit-content;
+}
+
+/* Container Alignment */
+.simple-image-dropdown {
+    margin: 15px 0 0 55px; /* Aligned sa title */
+    width: fit-content;
+}
+
+/* Button Design */
+.simple-image-btn {
+    list-style: none;
+    cursor: pointer;
+    font-size: 0.75rem; /* Mas maliit para sa minimalist look */
+    font-weight: 800;
+    color: #1e2749; /* Dark Blue */
+    border: 1px solid #ddd;
+    padding: 6px 14px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* SVG Icon Size */
+.see-image-icon {
+    width: 16px;
+    height: 16px;
+    color: #1e2749;
+    transition: color 0.2s ease;
+}
+
+.simple-image-btn:hover {
+    background-color: #1e2749;
+    color: #ffffff;
+    border-color: #1e2749;
+}
+
+/* Icon change color on hover */
+.simple-image-btn:hover .see-image-icon {
+    color: #ffffff;
+}
+
+/* Image Reveal Box */
+.simple-image-box {
+    margin-top: 12px;
+    padding: 8px;
+    border: 1px solid #eee;
+    background: #fff;
+    max-width: 320px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    animation: simpleFade 0.3s ease-out; /* */
+}
+
+@keyframes simpleFade {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.simple-image-box img {
+    width: 100%;
+    border-radius: 2px;
+}
+
+/* Browser default arrow removal */
+.simple-image-dropdown summary::-webkit-details-marker {
+    display: none;
+}

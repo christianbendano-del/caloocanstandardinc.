@@ -1,6 +1,6 @@
 <?php include 'header.php'; ?>
 
-<section class="modern-hero" style="background-image: url('picture/samplepic.jpg');">
+<section class="modern-hero" style="background-image: url('picture/[CSI] Home Pitstop - Car Talks.png');">
     <div class="hero-overlay">
         <div class="hero-container">
             <h1>Tires</h1>
@@ -56,7 +56,7 @@
                 </div>
             </a>
 
-            <a href="#" class="info-card">
+            <a href="ccespecifications.php" class="info-card">
                 <div class="info-img-box">
                     <img src="picture/[CSI] Pitstop Tire Specification.png" alt="Functions">
                     <div class="info-label">
@@ -66,7 +66,7 @@
                 </div>
             </a>
 
-            <a href="#" class="info-card">
+            <a href="ccetypesoftires.php" class="info-card">
                 <div class="info-img-box">
                     <img src="picture/[CSI] Pitstop Tire Types.png" alt="Variety">
                     <div class="info-label">

@@ -92,7 +92,7 @@
                 </a>
             </div>
             <div class="tire-card-no-border">
-                <a href="pitstop.php" class="tire-link-box">
+                <a href="carcaretips.php" class="tire-link-box">
                     <div class="tire-img-clipper">
                         <img src="picture/[CSI] Home Pitstop - Car Care Tips.png" alt="Tips">
                         <div class="tire-card-label">CAR CARE TIPS</div>
@@ -100,7 +100,7 @@
                 </a>
             </div>
             <div class="tire-card-no-border">
-                <a href="pitstop.php" class="tire-link-box">
+                <a href="carcareessentials.php" class="tire-link-box">
                     <div class="tire-img-clipper">
                         <img src="picture/[CSI] Home Pitstop - Car Talks.png" alt="Talks">
                         <div class="tire-card-label">CAR ESSENTIALS</div>
