@@ -36,7 +36,7 @@
 
         <div class="carcare-grid" id="tires-grid">
             
-            <a href="tire-structure.php" class="info-card">
+            <a href="#" class="info-card">
                 <div class="info-img-box">
                     <img src="picture/samplepic.jpg" alt="Structure">
                     <div class="info-label">
@@ -46,7 +46,7 @@
                 </div>
             </a>
 
-            <a href="tire-materials.php" class="info-card">
+            <a href="#" class="info-card">
                 <div class="info-img-box">
                     <img src="picture/samplepic.jpg" alt="Materials">
                     <div class="info-label">
@@ -56,7 +56,7 @@
                 </div>
             </a>
 
-            <a href="tire-functions.php" class="info-card">
+            <a href="#" class="info-card">
                 <div class="info-img-box">
                     <img src="picture/samplepic.jpg" alt="Functions">
                     <div class="info-label">
@@ -66,7 +66,7 @@
                 </div>
             </a>
 
-            <a href="tire-variety.php" class="info-card">
+            <a href="#" class="info-card">
                 <div class="info-img-box">
                     <img src="picture/samplepic.jpg" alt="Variety">
                     <div class="info-label">

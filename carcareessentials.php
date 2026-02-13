@@ -21,8 +21,8 @@
 
             <div class="category-tabs" id="categoryMenu">
                 <a href="carcareessentials.php" class="tab-btn active">Tires</a>
-                <a href="carcareessentialsbatteries.php" class="tab-btn">Batteries</a>
-                <a href="carcareessentialslubricants.php" class="tab-btn">Others</a>
+                <a href="" class="tab-btn">Batteries</a>
+                <a href="" class="tab-btn">Others</a>
                
             </div>
         </div>
@@ -38,7 +38,7 @@
             
             <a href="ccefunction.php" class="info-card">
                 <div class="info-img-box">
-                    <img src="picture/samplepic.jpg" alt="Structure">
+                    <img src="picture/[CSI] Pitstop Tire Functions.png" alt="Structure">
                     <div class="info-label">
                         <span>FUNCTION</span>
                         <i class="fas fa-caret-right"></i>
@@ -46,9 +46,9 @@
                 </div>
             </a>
 
-            <a href="tire-materials.php" class="info-card">
+            <a href="cceanatomy.php" class="info-card">
                 <div class="info-img-box">
-                    <img src="picture/samplepic.jpg" alt="Materials">
+                    <img src="picture/[CSI] Pitstop Tire Anatomy.png" alt="Materials">
                     <div class="info-label">
                         <span>ANATOMY OF TIRES</span>
                         <i class="fas fa-caret-right"></i>
@@ -56,9 +56,9 @@
                 </div>
             </a>
 
-            <a href="tire-functions.php" class="info-card">
+            <a href="#" class="info-card">
                 <div class="info-img-box">
-                    <img src="picture/samplepic.jpg" alt="Functions">
+                    <img src="picture/[CSI] Pitstop Tire Specification.png" alt="Functions">
                     <div class="info-label">
                         <span>SPECIFICATIONS</span>
                         <i class="fas fa-caret-right"></i>
@@ -66,9 +66,9 @@
                 </div>
             </a>
 
-            <a href="tire-variety.php" class="info-card">
+            <a href="#" class="info-card">
                 <div class="info-img-box">
-                    <img src="picture/samplepic.jpg" alt="Variety">
+                    <img src="picture/[CSI] Pitstop Tire Types.png" alt="Variety">
                     <div class="info-label">
                         <span>TYPES OF TIRES</span>
                         <i class="fas fa-caret-right"></i>

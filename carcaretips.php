@@ -21,8 +21,8 @@
 
             <div class="category-tabs" id="categoryMenu">
                 <a href="carcaretips.php" class="tab-btn active">Tires</a>
-                <a href="carcaretipsbatteries.php" class="tab-btn">Batteries</a>
-                <a href="carcaretipsothers.php" class="tab-btn">Others</a>
+                <a href="" class="tab-btn">Batteries</a>
+                <a href="" class="tab-btn">Others</a>
                
             </div>
         </div>
@@ -36,7 +36,7 @@
 
        <div class="carcare-grid" id="tires-grid">
             
-            <a href="tire-structure.php" class="info-card">
+            <a href="#" class="info-card">
                 <div class="info-img-box">
                     <img src="picture/samplepic.jpg" alt="Structure">
                     <div class="info-label">
@@ -46,7 +46,7 @@
                 </div>
             </a>
 
-            <a href="tire-materials.php" class="info-card">
+            <a href="#" class="info-card">
                 <div class="info-img-box">
                     <img src="picture/samplepic.jpg" alt="Materials">
                     <div class="info-label">
@@ -56,7 +56,7 @@
                 </div>
             </a>
 
-            <a href="tire-functions.php" class="info-card">
+            <a href="#" class="info-card">
                 <div class="info-img-box">
                     <img src="picture/samplepic.jpg" alt="Functions">
                     <div class="info-label">
@@ -66,7 +66,7 @@
                 </div>
             </a>
 
-            <a href="tire-variety.php" class="info-card">
+            <a href="#" class="info-card">
                 <div class="info-img-box">
                     <img src="picture/samplepic.jpg" alt="Variety">
                     <div class="info-label">
@@ -88,7 +88,7 @@
             <span>PITSTOP</span>
         </a>
         <a href="carcareessentials.php" class="related-card">
-            <span>CAR CARE ESSENTIALS</span>
+            <span>CAR ESSENTIALS</span>
         </a>
     </div>
 </div>

@@ -6,17 +6,13 @@
     background-color: #fcfcfc;
 }
 
-.breadcrumb-area, .dealer-container {
+ .dealer-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     width: 100%;
 }
 
-.breadcrumb-area {
-    padding-top: 30px;
-    padding-bottom: 10px;
-}
 
 /* ==========================================================================
    2. HERO BANNER

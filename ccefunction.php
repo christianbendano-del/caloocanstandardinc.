@@ -1,7 +1,7 @@
 <?php include 'header.php'; ?>
 
 <section class="function-section">
-    <div class="container">
+    
         <h2 class="page-main-title">FUNCTION</h2>
 
         <div class="function-image-wrapper">
@@ -11,84 +11,54 @@
         <div class="function-content">
             <p class="intro-text">Tires are often overlooked, but they are the only part of your vehicle designed to touch the ground. To keep you moving safely, they perform four essential functions:</p>
 
-            <div class="info-block" id="direction">
+            <div class="info-block">
                 <div class="info-header">
                     <span class="info-num">01</span>
-                    <h4>CHANGE DIRECTION</h4>
+                    <h4 class="info-title">CHANGE DIRECTION</h4>
                 </div>
-                <p>Tires respond to steering inputs and help maintain stability and control during cornering</p>
+                <p class="info-desc">Tires respond to steering inputs and help maintain stability and control during cornering.</p>
             </div>
 
-            <div class="info-block" id="weight">
+            <div class="info-block">
                 <div class="info-header">
                     <span class="info-num">02</span>
-                    <h4>SUPPORT WEIGHT</h4>
+                    <h4 class="info-title">SUPPORT WEIGHT</h4>
                 </div>
-                <p>Tires carry the weight of the vehicle, its passengers, and cargo</p>
+                <p class="info-desc">Tires carry the weight of the vehicle, its passengers, and cargo.</p>
             </div>
 
-            <div class="info-block" id="shock">
+            <div class="info-block">
                 <div class="info-header">
                     <span class="info-num">03</span>
-                    <h4>SHOCK ABSORPTION</h4>
+                    <h4 class="info-title">SHOCK ABSORPTION</h4>
                 </div>
-                <p>Tires absorbs bumps and irregularities on the road for comfort and safety</p>
+                <p class="info-desc">Tires absorbs bumps and irregularities on the road for comfort and safety.</p>
             </div>
 
-            <div class="info-block" id="grip">
+            <div class="info-block">
                 <div class="info-header">
                     <span class="info-num">04</span>
-                    <h4>GRIP AND TRACTION</h4>
+                    <h4 class="info-title">GRIP AND TRACTION</h4>
                 </div>
-                <p>Tires ensure grip on the road surface during acceleration, braking, and turning</p>
+                <p class="info-desc">Tires ensure grip on the road surface during acceleration, braking, and turning.</p>
             </div>
 
-            <p class="footer-note">All of these critical functions are performed through a contact patch roughly the size of your hand — a small area carrying a massive responsibility. Next time you drive, take care of your tires.</p>
-        </div>
-
-        <div class="interactive-container-landscape">
-            <div class="ls-card" onclick="scrollToSection('direction')" onmouseover="highlightText('direction')" onmouseout="removeHighlight('direction')">
-                <div class="ls-image">
-                    <img src="picture/samplepic.jpg" alt="PCR">
-                </div>
-                <div class="ls-label">
-                    <span>CHANGE DIRECTION</span>
-                    <i class="fas fa-chevron-up"></i>
-                </div>
-            </div>
-
-            <div class="ls-card" onclick="scrollToSection('weight')" onmouseover="highlightText('weight')" onmouseout="removeHighlight('weight')">
-                <div class="ls-image">
-                    <img src="picture/samplepic.jpg" alt="LCV">
-                </div>
-                <div class="ls-label">
-                    <span>SUPPORT WEIGHT</span>
-                    <i class="fas fa-chevron-up"></i>
-                </div>
-            </div>
-
-            <div class="ls-card" onclick="scrollToSection('shock')" onmouseover="highlightText('shock')" onmouseout="removeHighlight('shock')">
-                <div class="ls-image">
-                    <img src="picture/samplepic.jpg" alt="TBR">
-                </div>
-                <div class="ls-label">
-                    <span>SHOCK ABSORPTION)</span>
-                    <i class="fas fa-chevron-up"></i>
-                </div>
-            </div>
-
-            <div class="ls-card" onclick="scrollToSection('grip')" onmouseover="highlightText('grip')" onmouseout="removeHighlight('grip')">
-                <div class="ls-image">
-                    <img src="picture/samplepic.jpg" alt="OTR">
-                </div>
-                <div class="ls-label">
-                    <span>GRIP AND TRACTION</span>
-                    <i class="fas fa-chevron-up"></i>
-                </div>
-            </div>
+            <p class="footer-note">All of these critical functions are performed through a contact patch roughly the size of your hand — a small area carrying a massive responsibility.</p>
         </div>
     </div>
 </section>
+       
 
+<div class="related-links-container">
+    <h3 class="related-title">RELATED LINKS</h3>
+    <div class="related-grid">
+        <a href="pitstop.php" class="related-card">
+            <span>PITSTOP</span>
+        </a>
+        <a href="carcareessentials.php" class="related-card">
+            <span>CAR ESSENTIALS</span>
+        </a>
+    </div>
+</div>
 <?php include 'footer.php'; ?>
 

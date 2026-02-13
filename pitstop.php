@@ -100,7 +100,7 @@
             <div class="card-bg-img" style="background-image: url('picture/[CSI]\ Home\ Pitstop\ -\ Car\ Talks.png');"></div>
             <div class="overlay-content">
                 <p class="overlay-subtitle">Basic Car Knowledge</p>
-                <h2 class="overlay-title">Car Care Essentials</h2>
+                <h2 class="overlay-title">Car Essentials</h2>
                 <p class="overlay-description">Join the conversation about the future of automotive tech.</p>
                 <a href="carcareessentials.php" class="btn-discover">
                     <span class="plus-icon">⊕</span> DISCOVER MORE

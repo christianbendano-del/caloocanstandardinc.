@@ -1,143 +1,256 @@
-/* --- FUNCTION SECTION GENERAL --- */
+/* --- SECTION SPACING --- */
 .function-section {
-    padding: 60px 0;
-    background: whitesmoke;
+    padding: 100px 0; /* Malaking space sa taas at baba para sa Header/Footer */
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Sinisiguro na lahat ng flex items ay nasa gitna */
 }
 
-.page-main-title {
-    font-family: 'Arial Black', sans-serif;
-    font-size: 28px;
-    text-transform: uppercase;
-    
-    /* WIDTH ADJUSTMENT */
-    max-width: 1200px; /* Sukat ng lapad */
-    margin: 0 auto 40px auto; /* I-center ang title at lagyan ng space sa ilalim */
-    
-    text-align: left; /* Pwedeng 'center' kung gusto mong nasa gitna ang text */
-}
+
+
+/* --- IMAGE CENTERED --- */
 .function-image-wrapper {
-    text-align: center;
-    margin-bottom: 50px;
-    width: 100%; /* Siguraduhing sakop ang buong lapad ng container */
+    width: 100%;
+    margin: 40px 0 60px 0;
+    display: flex;
+    justify-content: center;
 }
 
 .center-tire-only {
-    width: 80%; /* Lakihan ang percentage depende sa gusto mong laki (halimbawa: 80% o 100%) */
-    max-width: 900px; /* Nilalagyan natin ng limit para hindi mag-pixelate sa sobrang laking screen */
-    height: auto; /* Para hindi ma-stretch ang image */
-    display: inline-block;
-    transition: transform 0.3s ease; /* Optional: para sa smooth effect */
+    width: 100%;
+    max-width: 800px;
+    height: auto;
 }
 
-/* Kung gusto mong mas malaki pa kapag naka-desktop */
-@media (min-width: 1200px) {
-    .center-tire-only {
-        max-width: 1100px; 
-    }
-}
-
-/* --- INFO BLOCKS (RED LINE DESIGN) --- */
+/* --- CENTERED CONTENT BLOCKS --- */
 .function-content {
-    max-width: 1200px;
-    margin: 0 auto 60px auto;
+    max-width: 750px; /* Mas makitid para magmukhang professional ang margin sa gilid */
+    margin: 0 auto;
+    text-align: left; /* Ibabalik natin sa left alignment ang text sa loob ng block para malinis */
 }
 
 .info-block {
-    margin-bottom: 30px;
-    padding: 15px 20px;
-    border-left: 3px solid #eee; /* Light grey default */
-    transition: all 0.3s ease;
+    padding: 20px 0 20px 30px;
+    margin-bottom: 10px;
+    border-left: 4px solid transparent; 
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
 }
 
-/* Active State (Hover o Click) */
-.info-block.active-highlight, 
-.info-block.clicked-highlight {
-    border-left: 3px solid #E21B24; /* Red Line */
-    background-color: rgba(226, 27, 36, 0.03);
+/* --- HOVER EFFECT WITH MOVEMENT --- */
+.info-block:hover {
+    border-left: 4px solid #d32f2f;
+    background-color: #f9f9f9;
+    padding-left: 45px; /* Ang "galaw" na effect pakanan */
+}
+
+.info-block:hover .info-title {
+    transform: translateX(8px); /* Uusog ang word pakanan */
+    color: #000;
+}
+
+.info-block:hover .info-num {
+    color: #f8b4b4;
+    transform: scale(1.1);
+}
+
+/* --- TYPOGRAPHY --- */
+.page-main-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.intro-text, .footer-note {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
 }
 
 .info-header {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 8px;
+    gap: 20px;
 }
 
 .info-num {
-    font-family: 'Arial Black', sans-serif;
-    font-size: 18px;
-    color: #ccc;
-}
-
-.info-block.active-highlight .info-num,
-.info-block.clicked-highlight .info-num {
-    color: #E21B24;
-}
-
-.info-block h4 {
-    font-family: 'Arial Black', sans-serif;
-    font-size: 16px;
-    margin: 0;
-    color: #000;
-}
-
-.info-block.active-highlight h4,
-.info-block.clicked-highlight h4 {
-    color: #E21B24;
-}
-
-/* --- INTERACTIVE GRID (LANDSCAPE) --- */
-.interactive-container-landscape {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.ls-card {
-    border: 1px solid #333;
-    cursor: pointer;
-    background: #fff;
-    transition: 0.3s;
-}
-
-.ls-image {
-    width: 100%;
-    aspect-ratio: 25 / 9;
-    overflow: hidden;
-}
-
-.ls-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.ls-label {
-    background-color: black;
-    padding: 10px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid #333;
-}
-
-.ls-label span {
+    font-size: 1.4rem;
     font-weight: 800;
-    font-size: 11px;
-    color: white;
+    color: #e0e0e0;
+    transition: all 0.3s ease;
 }
 
-.ls-card:hover .ls-label {
+.info-title {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.info-desc {
+    margin: 8px 0 0 55px; /* Alignment sa ilalim ng Title */
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Para sa spacing ng Intro at Footer text */
+.intro-text {
+    margin-bottom: 40px;
+}
+
+.footer-note {
+    margin-top: 40px;
+}
+
+/* --- RELATED LINKS STYLING --- */
+.related-links-container {
+    max-width: 1600px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.related-title {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc; /* Ang mahabang manipis na linya */
+}
+
+/* Ang makapal na linya sa ilalim ng text */
+.related-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 60px; /* Sukat ng makapal na underline */
+    height: 4px;
     background-color: #E21B24;
 }
 
-.ls-card:hover .ls-label span, 
-.ls-card:hover .ls-label i {
-    color: #fff;
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dalawang columns gaya ng nasa image */
+    gap: 20px;
+    margin-top: 30px;
 }
 
-@media (max-width: 768px) {
-    .interactive-container-landscape { grid-template-columns: 1fr; }
+.related-card {
+    background-color: black; /* Grey background gaya ng nasa sample */
+    height: 80px; /* Taas ng box */
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.related-card span {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.related-card:hover {
+    background-color: #E21B24; /* Bahagyang didilim pag na-hover */
+    transform: translateX(5px); /* Konting galaw pakanan */
+}
+
+/* Responsive para sa Mobile */
+@media (max-width: 600px) {
+    .related-grid {
+        grid-template-columns: 1fr; /* Isang column na lang pag mobile */
+    }
+}
+
+/* cCeanatomy section*/
+
+.table-dropdown {
+    margin: 15px 0 0 55px; /* Naka-align sa simula ng title text */
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.dropdown-button {
+    padding: 10px 15px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #444;
+}
+
+/* Para sa arrow animation */
+.table-dropdown[open] .arrow {
+    transform: rotate(180deg);
+}
+
+.table-wrapper {
+    padding: 15px;
+    border-top: 1px solid #eee;
+    overflow-x: auto; /* Para hindi masira ang layout sa mobile */
+    animation: slideDown 0.3s ease-out;
+}
+
+/* Table Styling na sakto sa width */
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.comparison-table th, .comparison-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.comparison-table th {
+    background: #f8f8f8;
+    color: #000;
+}
+
+.feat-name {
+    font-weight: bold;
+    background: #fafafa;
+}
+
+
+
+/* Animation */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Siguraduhin na hindi gagalaw ng masyado ang block sa hover pag bukas ang table */
+.info-block:hover .table-dropdown {
+    border-color: #d32f2f;
+}
+/* Tinatanggal ang default indent ng listahan sa loob ng table */
+.cell-list {
+    margin: 5px 0;
+    padding-left: 20px; /* Space para sa bullet/dash */
+    list-style-type: "- "; /* Gumagamit ng gitling (dash) gaya ng nasa image */
+}
+
+.cell-list li {
+    margin-bottom: 2px;
+    font-size: 0.9rem;
+}
+
+/* Optional: Kung gusto mong lahat ng text sa loob ng cell ay sumunod sa font style */
+.adv-tube {
+    line-height: 1.4;
+    vertical-align: top;
 }

@@ -11,13 +11,7 @@
     </section>
 
     <section class="dealer-section">
-        <div class="breadcrumb-area">
-            <nav class="breadcrumbs">
-                <a href="index.php"><i class="fas fa-home"></i></a>
-                <span class="separator">›</span>
-                <span class="current-page">Be a Dealer</span>
-            </nav>
-        </div>
+       
 
         <div class="dealer-container">
             <div class="dealer-form-box">

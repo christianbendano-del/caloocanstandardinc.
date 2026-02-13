@@ -75,7 +75,7 @@
 /* --- PRODUCT GRID DESIGN --- */
 .carcare-grid {
     display: grid; grid-template-columns: repeat(3, 1fr);
-    gap:15px; max-width: 1400px; margin: 0 auto 60px; padding: 0 20px;
+    gap:15px; max-width: 1700px; margin: 0 auto 100px; padding: 0 20px;
 }
 
 .info-card {
@@ -86,12 +86,12 @@
 .info-card:hover { transform: translateY(-8px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
 .info-img-box img {
-    width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block;
+    width: 100%; aspect-ratio: 25 / 10; object-fit: cover; display: block;
 }
 
 /* Ang Black Label sa ilalim */
 .info-label {
-    background: #111; color: #fff; padding: 15px;
+    background: #111; color: #fff; padding: 25px;
     display: flex; justify-content: space-between; align-items: center;
 }
 .info-label span { font-family: 'Arial Black', sans-serif; font-weight: 900; font-size: 13px; text-transform: uppercase; }
@@ -116,7 +116,7 @@
 
 /* --- RELATED LINKS STYLING --- */
 .related-links-container {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 50px auto;
     padding: 0 20px;
 }
