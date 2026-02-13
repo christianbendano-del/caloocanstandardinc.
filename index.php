@@ -103,7 +103,7 @@
                 <a href="pitstop.php" class="tire-link-box">
                     <div class="tire-img-clipper">
                         <img src="picture/[CSI] Home Pitstop - Car Talks.png" alt="Talks">
-                        <div class="tire-card-label">CAR TALKS</div>
+                        <div class="tire-card-label">CAR ESSENTIALS</div>
                     </div>
                 </a>
             </div>
