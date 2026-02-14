@@ -1,6 +1,6 @@
 <?php include 'header.php'; ?>
 
-<section class="modern-hero" style="background-image: url('picture/samplepic.jpg');">
+<section class="modern-hero" style="background-image: url('picture/[CSI] Home Pitstop - Car Care Tips.png');">
     <div class="hero-overlay">
         <div class="hero-container">
             <h1>Tires</h1>
@@ -38,7 +38,7 @@
             
             <a href="cctpisotest.php" class="info-card">
                 <div class="info-img-box">
-                    <img src="picture/samplepic.jpg" alt="Structure">
+                    <img src="picture/[CSI] Car Care Tip Piso Test.png" alt="Structure">
                     <div class="info-label">
                         <span>Piso Test</span>
                         <i class="fas fa-caret-right"></i>
@@ -46,9 +46,9 @@
                 </div>
             </a>
 
-            <a href="#" class="info-card">
+            <a href="cctwhentoreplaceyourtire.php" class="info-card">
                 <div class="info-img-box">
-                    <img src="picture/samplepic.jpg" alt="Materials">
+                    <img src="picture/[CSI] Car Care Tip When To Replace Tire.png" alt="Materials">
                     <div class="info-label">
                         <span>When to replace your tire?</span>
                         <i class="fas fa-caret-right"></i>
@@ -87,8 +87,8 @@
         <a href="pitstop.php" class="related-card">
             <span>PITSTOP</span>
         </a>
-        <a href="carcareessentials.php" class="related-card">
-            <span>CAR ESSENTIALS</span>
+       <a href="carcaretips.php" class="related-card">
+            <span>CAR CARE TIPS</span>
         </a>
     </div>
 </div>
