@@ -27,7 +27,7 @@
             SEE IMAGE
         </summary>
         <div class="simple-image-box">
-            <img src="picture/pcrtire.png" alt="Passenger Car Radial Tire">
+            <img src="picture/pcrtire.PNG" alt="Passenger Car Radial Tire">
             <p class="simple-caption">Example of a Passenger Car Radial (PCR) tire.</p>
         </div>
     </details>
@@ -70,7 +70,7 @@
             SEE IMAGE
         </summary>
         <div class="simple-image-box">
-            <img src="picture/tbrtires.png" alt="Passenger Car Radial Tire">
+            <img src="picture/tbrtires.PNG" alt="Passenger Car Radial Tire">
             <p class="simple-caption">Example of a TRUCK BUS RADIAL (TBR) tire.</p>
         </div>
     </details>
@@ -92,7 +92,7 @@ Engineered to handle extremely heavy loads, resist cuts and abrasions, and provi
             SEE IMAGE
         </summary>
         <div class="simple-image-box">
-            <img src="picture/otrtires.png" alt="Passenger Car Radial Tire">
+            <img src="picture/otrtires.PNG" alt="Passenger Car Radial Tire">
             <p class="simple-caption">Example of a OFF HIGHWAY TIRES (OHT) tire.</p>
         </div>
     </details>
@@ -113,7 +113,7 @@ Engineered to handle extremely heavy loads, resist cuts and abrasions, and provi
             SEE IMAGE
         </summary>
         <div class="simple-image-box">
-            <img src="picture/indtires.png" alt="Passenger Car Radial Tire">
+            <img src="picture/indtires.PNG" alt="Passenger Car Radial Tire">
             <p class="simple-caption">Example of a INDUSTRIAL (IND) tire.</p>
         </div>
     </details>
