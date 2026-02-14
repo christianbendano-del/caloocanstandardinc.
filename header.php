@@ -29,7 +29,7 @@
         }
         elseif (in_array($current_page, ['footer.php'])) {
             echo '<link rel="stylesheet" href="style.css">';
-        } elseif (in_array($current_page, ['ccefunction.php','cceanatomy.php','ccespecifications.php','ccetypesoftires.php'])) {
+        } elseif (in_array($current_page, ['ccefunction.php','cceanatomy.php','ccespecifications.php','ccetypesoftires.php','cctpisotest.php'])) {
             echo '<link rel="stylesheet" href="cce.css">';
         }
     ?>

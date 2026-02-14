@@ -4,6 +4,7 @@
     <div class="background-slider">
         <div class="bg-slide active" style="background-image: url('picture/[CSI] Home Cover Photo - Alliance.png');"></div>
         <div class="bg-slide" style="background-image: url('picture/[CSI] Home Cover Photo - Wonderland.png');"></div>
+        <div class="bg-slide" style="background-image: url('picture/[CSI] Home Cover - MRL.png');"></div>
     </div>
 
     <div class="static-content">

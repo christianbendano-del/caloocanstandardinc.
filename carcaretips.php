@@ -36,11 +36,11 @@
 
        <div class="carcare-grid" id="tires-grid">
             
-            <a href="#" class="info-card">
+            <a href="cctpisotest.php" class="info-card">
                 <div class="info-img-box">
                     <img src="picture/samplepic.jpg" alt="Structure">
                     <div class="info-label">
-                        <span>HOW TO CHOOSE TIREN</span>
+                        <span>Piso Test</span>
                         <i class="fas fa-caret-right"></i>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                 <div class="info-img-box">
                     <img src="picture/samplepic.jpg" alt="Materials">
                     <div class="info-label">
-                        <span>HOW TO MAXIMIZE TIRE</span>
+                        <span>When to replace your tire?</span>
                         <i class="fas fa-caret-right"></i>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                 <div class="info-img-box">
                     <img src="picture/samplepic.jpg" alt="Functions">
                     <div class="info-label">
-                        <span>5 MUST DO BEFORE A TRIP</span>
+                        <span>How to choose the right tire</span>
                         <i class="fas fa-caret-right"></i>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                 <div class="info-img-box">
                     <img src="picture/samplepic.jpg" alt="Variety">
                     <div class="info-label">
-                        <span>WHEN TO REPLACE</span>
+                        <span>How to maximize your tire</span>
                         <i class="fas fa-caret-right"></i>
                     </div>
                 </div>
@@ -93,4 +93,25 @@
     </div>
 </div>
 <?php include 'footer.php'; ?>
+<script>
+function filterCategories() {
+    // 1. Kunin ang input value at gawing lowercase para hindi case-sensitive
+    let input = document.getElementById('brandSearch').value.toLowerCase();
+    
+    // 2. Kunin lahat ng cards sa loob ng grid
+    let cards = document.getElementsByClassName('info-card');
 
+    // 3. I-loop ang bawat card
+    for (let i = 0; i < cards.length; i++) {
+        // Kunin ang text sa loob ng span (hal. "FUNCTION", "ANATOMY OF TIRES")
+        let label = cards[i].querySelector('.info-label span').textContent.toLowerCase();
+
+        // 4. I-check kung ang input ay nasa loob ng label
+        if (label.includes(input)) {
+            cards[i].style.display = ""; // Ipakita ang card
+        } else {
+            cards[i].style.display = "none"; // Itago ang card
+        }
+    }
+}
+</script>
